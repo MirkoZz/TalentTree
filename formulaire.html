@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+	<link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ <!-- En-tête World of Warcraft -->
+    <header>
+        <img src="images/header.png" />
+    </header>
+    <main>
+        <form id="formulaire" action="" method="">
+            <fieldset>
+                <legend>Inscription</legend>
+                <p>
+                    <label>*Pseudo:</label>
+                    <input type="text" name="nom" placeholder="Votre pseudo" required />
+                </p>
+                <p>
+                    <label>*Adresse Mail:</label>
+                    <input id="mail" type="email" name="email" placeholder="Votre email" required />
+                </p>
+                <p>
+                    <label>*Age:</label>
+                    <input type="number" min="1" max="99" name="age" required />
+                </p>
+            </fieldset>
+            <div id="autre">
+                <p id="radio">
+                    <label>Sexe:</label>
+                    <input type="radio" name="sexe" value="h">Homme
+                    <input type="radio" name="sexe" value="f">Femme
+                </p>
+                <p>
+                    <label>Statut:</label>
+                    <select name="statut">
+                    <option value="F" >Confirmé</option>
+                    <option value="A" >Débutant</option>
+                </select>
+                </p>
+                <input type="hidden" name="invisible" value="toto" />
+                <p>
+                    <label>Classe Préférée</label>
+                    <input list="Classes">
+                    <datalist id="Classes">
+                    <option value="Druid"></option>
+                    <option value="Hunter"></option>
+                    <option value="Mage"></option>
+                    <option value="Paladin"></option>
+                    <option value="Priest"></option>
+                    <option value="Rogue"></option>
+                    <option value="Shaman"></option>
+                    <option value="Warlock"></option>
+                    <option value="Warrior"></option>
+                </datalist>
+                </p>
+                <p>
+                    <label id="comment">Commentaire:</label>
+                    <textarea name="commentaire" placeholder="Important : Si vous ne fournissez pas d'adresse e-mail, nous ne pourrons pas donner de suivi sur votre feedback. Nous ne vendrons ni ne donnerons jamais votre adresse e-mail à des tiers."></textarea>
+                </p>
+            </div>
+            <div id="btn_form">
+                <button type="reset">Delete</button>
+                <button type="submit" onclick="verifMail()">Go!</button>
+            </div>
+        </form>
+        
+        <div id="socialNetwork">
+		  <a id="facebook" href="https://www.facebook.com"><img src="images/fb.png"></a>
+		  <a id="twitter" href="https://www.twitter.com"><img src="images/twitter.ico"></a>
+	    </div>
+        
+        <footer>
+            <div>MirkoZ Copyright &copy; 2017</div>
+            <div><a href="index.html">Accueil</a></div>
+        </footer>
+    </main>
+    
+	
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>

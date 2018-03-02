@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbre de talent - Guerrier</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    
+    <!-- En-tête World of Warcraft -->
+    <header>
+        <img src="images/header.png" >
+    </header>
+    
+    <!-- Cadre de gestion des points restants/dépensés-->
+    <main>
+        <div id="points">
+            <div id="nbPoints">
+                <p>Nombre de points actuels : <span id="showPoints">51</span></p>
+                <p>Nombre de points dépensés : <span id="showDepenses">0</span></p>
+                <button onclick="javascript:window.location.reload()">Réinitialiser</button>
+            </div>
+            <div id="genre">
+                <h1>Guerrier</h1>
+                <img src="images/guerrier.png">
+            </div>
+        </div>
+
+        <!-- Arbre de talents-->
+        <div id="cadre" onselectstart="return false" oncontextmenu="return false"> <!-- Annulation du menu contextuel au clique droit -->
+            <div id="arbre">
+
+                <!-- Ligne 1 -->
+                <div id="ligne1">
+
+                    <!-- Compétence 1 -->
+                    <div class="classSkill" id="skill1">
+                        <div>
+                            <img src="images/skill1Available.PNG" id="imgSkill1">
+                        </div>
+                        <span id="cptSkill1">0/3</span>
+                        <div class="infoSkill" id="infoSkill1">
+                            <h1>IMPROVED HEROIC STRIKE</h1>
+                            <p>Réduit le coût en rage de votre technique Frappe héroïque de 1/2/3 points.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 2 -->
+                    <div class="classSkill" id="skill2">
+                        <div>
+                            <img src="images/skill2Available.PNG" id="imgSkill2">
+                        </div>
+                        <span id="cptSkill2">0/5</span>
+                        <div class="infoSkill" id="infoSkill2">
+                            <h1>DEFLECTION</h1>
+                            <p>Augmente de 1/2/3/4/5% vos chances de Parer.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 3 -->
+                    <div class="classSkill" id="skill3">
+                        <div>
+                            <img src="images/skill3Available.PNG" id="imgSkill3">
+                        </div>
+                        <span id="cptSkill3">0/3</span>
+                        <div class="infoSkill" id="infoSkill3">
+                            <h1>IMPROVED REND</h1>
+                            <p>Augmente de 15/25/35% les points de dégâts infligés par la technique Pourfendre.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 2 -->
+                <div id="ligne2">
+
+                    <!-- Compétence 4 -->
+                    <div class="classSkill" id="skill4">
+                        <div>
+                            <img src="images/skill4Off.PNG" id="imgSkill4">
+                        </div>
+                        <span id="cptSkill4">0/2</span>
+                        <div class="infoSkill" id="infoSkill4">
+                            <h1>IMPROVED CHARGE</h1>
+                            <p id="autreRequis4">Requiert 5 points en Armes</p>
+                            <p>Augmente la quantité de Rage générée par votre technique Charge de 3/6.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 5 -->
+                    <div class="classSkill" id="skill5">
+                        <div>
+                            <img src="images/skill5Off.PNG" id="imgSkill5">
+                        </div>
+                        <span id="cptSkill5">0/5</span>
+                        <div class="infoSkill" id="infoSkill5">
+                            <h1>TACTICAL MASTERY</h1>
+                            <p id="autreRequis5">Requiert 5 points en Armes</p>
+                            <p>Vous conservez jusqu'à 5/10/15/20/25 de vos points de rage lorsque vous changez de posture.</p>
+                        </div>
+                    </div>
+
+                    <!-- Flèche de lien entre les compétences 3 et 6 -->
+                    <div id="fleche1" style="filter: grayscale(100%)">
+                        <img src="images/fleche.png" >
+                    </div>
+
+                    <!-- Flèche de lien entre les compétences 5 et 8 -->
+                    <div id="fleche2" style="filter: grayscale(100%)">
+                        <img src="images/fleche.png" >
+                    </div> 
+
+                    <!-- Compétence 6 -->
+                    <div class="classSkill" id="skill6">
+                        <div>
+                            <img src="images/skill6Off.PNG" id="imgSkill6">
+                        </div>
+                        <span id="cptSkill6">0/3</span>
+                        <div class="infoSkill" id="infoSkill6">
+                            <h1>IMPROVED THUNDER CLAP</h1>
+                            <p id="autreRequis6">Requiert 5 points en Armes</p>
+                            <p>Réduit le coût de votre technique Coup de tonnerre de 1/2/4points de rage.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 3 -->
+                <div id="ligne3">
+
+                    <!-- Compétence 7 -->
+                    <div class="classSkill" id="skill7">
+                        <div>
+                            <img src="images//skill7Off.PNG" id="imgSkill7">
+                        </div>
+                        <span id="cptSkill7">0/2</span>
+                        <div class="infoSkill" id="infoSkill7">
+                            <h1>IMPROVED OVERPOWER</h1>
+                            <p id="autreRequis7">Requiert 10 points en Armes</p>
+                            <p>Augmente de 25/50% vos chances d'infliger un coup critique avec la technique Fulgurance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 8 -->
+                    <div class="classSkill" id="skill8">
+                        <div>
+                            <img src="images/skill8Off.PNG" id="imgSkill8">
+                        </div>
+                        <span id="cptSkill8">0/1</span>
+                        <div class="infoSkill" id="infoSkill8">
+                            <h1>ANGER MANAGEMENT</h1>
+                            <p id="autreRequis8">Requiert 10 points en Armes</p>
+                            <p id="requis8">Requiert 5 points en Tactical Mastery</p>
+                            <p>Augmente de 30% le temps nécessaire au processus de déperdition des points de rage lorsque vous cessez le combat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 9 -->
+                    <div class="classSkill" id="skill9">
+                        <div>
+                            <img src="images/skill9Off.PNG" id="imgSkill9">
+                        </div>
+                        <span id="cptSkill9">0/3</span>
+                        <div class="infoSkill" id="infoSkill9">
+                            <h1>DEEP WOUNDS</h1>
+                            <p id="autreRequis9">Requiert 10 points en Armes</p>
+                            <p id="requis9">Requiert 3 points en Improved Rend</p>
+                            <p>Vos coups critiques font saigner l'adversaire et lui infligent 20/40/60% des points de dégâts moyens de votre arme en 12sec.</p>
+                        </div>
+                    </div>
+
+                    <!-- Flèche de lien entre les compétences 9 et 11 -->
+                    <div id="fleche3" style="filter: grayscale(100%)">
+                        <img src="images/fleche.png" >
+                    </div> 
+                </div>
+
+                <!-- Ligne 4 -->
+                <div id="ligne4">
+
+                    <!-- Compétence 10 -->
+                    <div class="classSkill" id="skill10">
+                        <div>
+                            <img src="images/skill10Off.PNG" id="imgSkill10">
+                        </div>
+                        <span id="cptSkill10">0/5</span>
+                        <div class="infoSkill" id="infoSkill10">
+                            <h1>TWO-HANDED WEAPON SPECIALIZATION</h1>
+                            <p id="autreRequis10">Requiert 15 points en Armes</p>
+                            <p>Augmente de 1/2/3/4/5% les points de dégâts que vous infligez avec les armes à deux mains.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 11 -->
+                    <div class="classSkill" id="skill11">
+                        <div>
+                            <img src="images/skill11Off.PNG" id="imgSkill11">
+                        </div>
+                        <span id="cptSkill11">0/2</span>
+                        <div class="infoSkill" id="infoSkill11">
+                            <h1>IMPALE</h1>
+                            <p id="autreRequis11">Requiert 15 points en Armes</p>
+                            <p id="requis11">Requiert 3 points en Deep Wounds</p>
+                            <p>Augmente de 10/20% les points de dégâts supplémentaires infligés par vos coups critiques, lorsque vous utilisez vos techniques en postures de combat, défensive et berserker.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 5 -->
+                <div id="ligne5">
+
+                    <!-- Compétence 12 -->
+                    <div class="classSkill" id="skill12">
+                        <div>
+                            <img src="images/skill12Off.PNG" id="imgSkill12">
+                        </div>
+                        <span id="cptSkill12">0/5</span>
+                        <div class="infoSkill" id="infoSkill12">
+                            <h1>AXE SPECIALIZATION</h1>
+                            <p id="autreRequis12">Requiert 20 points en Armes</p>
+                            <p>Augmente de 1/2/3/4/5% vos chances d'infliger un coup critique avec les haches.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 13 -->
+                    <div class="classSkill" id="skill13">
+                        <div>
+                            <img src="images/skill13Off.PNG" id="imgSkill13">
+                        </div>
+                        <span id="cptSkill13">0/1</span>
+                        <div class="infoSkill" id="infoSkill13">
+                            <h1>SWEEPING STRIKES</h1>
+                            <p id="autreRequis13">Requiert 20 points en Armes</p>
+                            <p>Vos 5 prochaines attaques de mêlée touchent un adversaire proche supplémentaire.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 14 -->
+                    <div class="classSkill" id="skill14">
+                        <div>
+                            <img src="images/skill14Off.PNG" id="imgSkill14">
+                        </div>
+                        <span id="cptSkill14">0/5</span>
+                        <div class="infoSkill" id="infoSkill14">
+                            <h1>MACE SPECIALIZATION</h1>
+                            <p id="autreRequis14">Requiert 20 points en Armes</p>
+                            <p>Vous confère 1/2/3/4/6% de chances d'étourdir votre cible pendant 3 sec avec une Masse.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compétence 15 -->
+                    <div class="classSkill" id="skill15">
+                        <div>
+                            <img src="images/skill15Off.PNG" id="imgSkill15">
+                        </div>
+                        <span id="cptSkill15">0/5</span>
+                        <div class="infoSkill" id="infoSkill15">
+                            <h1>SWORD SPECIALIZATION</h1>
+                            <p id="autreRequis15">Requiert 20 points en Armes</p>
+                            <p>Vous confère 1/2/3/4/5% de chances de bénéficier d"une attaque supplémentaire sur la même cible, après avoir infligé des dégâts avec votre épée.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 6 -->
+                <div  id="ligne6">
+
+                    <!-- Compétence 16 -->
+                    <div class="classSkill" id="skill16">
+                        <div>
+                            <img src="images/skill16Off.PNG" id="imgSkill16">
+                        </div>
+                        <span id="cptSkill16">0/5</span>
+                        <div class="infoSkill" id="infoSkill16">
+                            <h1>POLEARM SPECIALIZATION</h1>
+                            <p id="autreRequis16">Requiert 25 points en Armes</p>
+                            <p>Augmente de 1/2/3/4/5% vos chances d'infliger un coup critique avec les armes d'hast.</p>
+                        </div>
+                    </div>
+
+                    <!-- Flèche de lien entre les compétences 13 et 18 -->
+                    <div id="fleche4" style="filter: grayscale(100%)">
+                        <img src="images/fleche.png" >
+                    </div> 
+
+                    <!-- Compétence 17 -->
+                    <div class="classSkill" id="skill17">
+                        <div>
+                            <img src="images/skill17Off.PNG" id="imgSkill17">
+                        </div>
+                        <span id="cptSkill17">0/3</span>
+                        <div class="infoSkill" id="infoSkill17">
+                            <h1>IMPROVED HAMSTRING</h1>
+                            <p id="autreRequis17">Requiert 25 points en Armes</p>
+                            <p>Confère à votre technique Brise-genou 5/10/15% de chances d'immobiliser votre cible pendant 5 sec.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ligne 7 -->
+                <div id="ligne7">
+
+                    <!-- Compétence 18 -->
+                    <div class="classSkill" id="skill18">
+                        <div>
+                            <img src="images/skill18Off.PNG" id="imgSkill18">
+                        </div>
+                        <span id="cptSkill18">0/1</span>
+                        <div class="infoSkill" id="infoSkill18">
+                            <h1>MORTAL STRIKE</h1>
+                            <p id="autreRequis18">Requiert 30 points en Armes</p>
+                            <p id="requis18">Requiert 1 point en Sweeping Strikes</p>
+                            <p>Une attaque vicieuse qui inflige les points de dégâts de l'arme plus 85 et blesse la cible. L'effet des sorts de soins dont elle est la cible est réduit de 50% pendant 10 sec.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="btn_pdf">
+                <button onclick="downloadPdf()">Télécharger</button>
+            </div>
+        </div>
+
+        <footer>
+            <div>MirkoZ Copyright &copy; 2017</div>
+            <div><a href="formulaire.html">Contact</a></div>
+        </footer>
+        
+    </main>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jspdf.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

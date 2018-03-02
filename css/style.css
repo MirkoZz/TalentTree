@@ -1,0 +1,557 @@
+body{
+    background-image: url(../images/background3.jpg); 
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+main{
+    width: 600px;
+    margin: 0px 100px;
+    margin: auto;
+    
+}
+
+/* En-tête World of Warcraft */
+header{
+    width: 800px;
+    margin:auto;
+    margin-top: 2%;
+}
+
+    header img{
+        width: 100%;
+    }
+
+/* Cadre de gestion des points actuels/dépensés */
+#points{
+    width: 100%;
+    margin: 50px auto 20px;
+    padding-bottom: 20px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-image: url(../images/arbreBackground.jpg);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+    
+    /* Points actuels/dépensés */
+    #nbPoints{
+        padding-top: 20px;
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+        #nbPoints span{
+            font-weight: bold;
+            color: #FFB800;
+        }
+
+        button{
+            width: 150px;
+            padding: 4px 5px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            background-color: #820000; 
+            font-weight: bold;
+            color: #FFB800;
+        }
+    
+    /* Classe Guerier */
+    #genre{
+        margin-top: 0;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: saddlebrown;
+        text-align: center;
+    }
+        
+        #genre h1{
+            margin: 0;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        #genre img{
+            width: 80px;
+        }
+
+/* Cadre de description des talents */
+.infoSkill{
+    width: 400px;
+    padding: 10px;
+    border:1px solid grey;
+    border-radius: 15px;
+    background-image: url(../images/background.jpg);
+    font-size: 1.3em;
+    color: #FFB800;
+    position: absolute;
+    bottom: 5em;
+    left: 3em;
+    z-index: 1000;
+    display: none;
+}
+
+    .infoSkill h1{
+        font-size: 1.3em;
+        color: white;
+    }
+
+    #autreRequis3, #autreRequis4, #autreRequis5, #autreRequis6, #autreRequis7, #autreRequis8, #autreRequis9, #autreRequis10, #autreRequis11, #autreRequis12, #autreRequis13, #autreRequis14, #autreRequis15, #autreRequis16, #autreRequis17, #autreRequis18{
+        margin:0;
+        color: red;
+    }
+
+    #requis8, #requis9, #requis11, #requis18{
+        margin: 0;
+        color: red;
+    }
+
+/* Cadre de l'arbre de talents */
+#cadre{
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px!important;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-image: url(../images/arbreBackground.jpg);
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Arbre de talents */
+#arbre{
+  margin: 20px auto;  
+}
+
+    #ligne1, #ligne2, #ligne3, #ligne4, #ligne5, #ligne6 , #ligne7{
+        display: flex;  
+    }
+
+        .classSkill{
+            margin: 5px;
+            position: relative;
+        }
+            
+            .classSkill span{
+                color: lime;
+                position:relative;
+                top: -23px;
+                left: 44px;
+            }
+
+            .classSkill img{
+                height: 70px;
+                width: 70px;
+            }
+
+        #skill6{
+            position: relative;
+            left: 80px;
+        }
+
+        #skill10, #skill11{
+            position: relative;
+            left: 80px;
+        }
+
+        #skill17{
+            position: relative;
+            left: 80px;
+        }
+
+        #skill18{
+            position: relative;
+            left: 80px;
+        }
+            
+            /* Affichage des descriptions de talent au survol */
+            #skill1:hover #infoSkill1{
+              display: block;
+            }
+
+            #skill2:hover #infoSkill2{
+                display: block;  
+            }
+
+            #skill3:hover #infoSkill3{
+                display: block;
+            }
+
+            #skill4:hover #infoSkill4{
+                display: block;
+            }
+
+            #skill5:hover #infoSkill5{
+                display: block;
+            }
+
+            #skill6:hover #infoSkill6{
+                display: block;
+            }
+
+            #skill7:hover #infoSkill7{
+                display: block;
+            }
+
+            #skill8:hover #infoSkill8{
+                display: block;
+            }
+
+            #skill9:hover #infoSkill9{
+                display: block;
+            }
+
+            #skill10:hover #infoSkill10{
+                display: block;
+            }
+
+            #skill11:hover #infoSkill11{
+                display: block;
+            }
+
+            #skill12:hover #infoSkill12{
+                display: block;
+            }
+
+            #skill13:hover #infoSkill13{
+                display: block;
+            }
+
+            #skill14:hover #infoSkill14{
+                display: block;
+            }
+
+            #skill15:hover #infoSkill15{
+                display: block;
+            }
+
+            #skill16:hover #infoSkill16{
+                display: block;
+            }
+
+            #skill17:hover #infoSkill17{
+                display: block;
+            }
+
+            #skill18:hover #infoSkill18{
+                display: block;
+            }
+                
+                /* Compteur de points des talents */
+                #cptSkill4, #cptSkill5, #cptSkill6, #cptSkill7, #cptSkill8, #cptSkill9, #cptSkill10, #cptSkill11, #cptSkill12, #cptSkill13, #cptSkill14, #cptSkill15, #cptSkill16, #cptSkill17, #cptSkill18{
+                                visibility: hidden;
+                            }
+
+            /* Flèches de lien entre les compétences */
+            #fleche1, #fleche2, #fleche3, #fleche4{
+                width: 0px;
+            }
+
+                #fleche1 img{
+                    width: 140px;
+                    height: 23px;
+                    transform: rotate(90deg);
+                    position: relative;
+                    top: 26px;
+                    left: -34px;
+                    z-index: 100;
+                }
+
+                #fleche2 img{
+                    width: 42px;
+                    height: 23px;
+                    transform: rotate(90deg);
+                    position: relative;
+                    top: 78px;
+                    left: -64px;
+                    z-index: 100;
+                }
+
+                #fleche3 img{
+                    width: 42px;
+                    height: 23px;
+                    transform: rotate(90deg);
+                    position: relative;
+                    top: 78px;
+                    left: -65px;
+                    z-index: 100;
+                }
+
+                #fleche4 img{
+                    width: 140px;
+                    height: 23px;
+                    transform: rotate(90deg);
+                    position: relative;
+                    top: 25px;
+                    left: -35px;
+                    z-index: 100;
+                }
+    #btn_pdf{
+        width: 90%;
+        text-align: right;
+        margin: 20px;
+    }
+        
+        #btn_pdf button{
+            font-size: 1.2em;
+            margin: 0px;
+        }
+
+/* Formulaire */
+form{
+    text-align: center;
+    width: 600px;
+    margin: 20px auto;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-image: url(../images/arbreBackground.jpg);
+    background-size: 100%;
+    font-family: sans-serif;
+	font-weight: bolder;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	color: antiquewhite;
+	text-shadow: 2px 2px 5px black;
+}
+
+    form p{
+        display: flex;
+        flex-direction: column;
+    }
+
+    fieldset{
+        border-color:  grey;
+        border-radius: 15px;
+        margin: 10px;
+    }
+
+    input, select, textarea{
+        width: 60%;
+        margin: auto;
+        background-color: antiquewhite;
+    }
+
+    textarea{
+        resize:none;
+        width: 250px;
+        height: 150px;
+        margin: auto;
+    }
+
+    #radio{
+        flex-direction: row;
+        width: 60%;
+        margin: auto;
+    }
+
+    #btn_form{
+        text-align: center;
+    }
+
+        #btn_form button{
+            margin: 10px;
+        }
+
+#socialNetwork{
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+}
+    #facebook img{
+        width: 100px;
+    }
+
+    #twitter img{
+        width: 105px;
+    }
+
+    #socialNetwork img{
+        margin: 20px;
+    }
+
+/* Footer */
+footer{
+    margin-bottom: 20px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-image: url(../images/arbreBackground.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+    footer div{
+        margin: 10px auto;
+        color: white;
+    }
+    
+footer a{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Version Tablette */
+@media screen and (min-width: 640px) and (max-width: 1080px){
+    header{
+        width: 90%;
+        max-width: 800px;
+    }
+    
+    #cadre{
+        margin-bottom: 20px;
+    }
+    
+    .infoSkill{
+        left: -140px;
+        width: 330px;
+    }
+}
+/* Version portable */
+@media screen and (max-width: 640px){
+    main{
+        margin: 0px;
+        width: 100%;
+    }
+    
+    body{
+        margin: 0px;
+        background: black;
+    }
+    
+    header{
+        width: 99%;
+    }
+    
+    #points{
+        width: 99%;
+        flex-direction: column-reverse;
+        margin: 20px 0px;
+        border-radius: 0px;
+    }
+    
+    #points button, #btn_pdf button{
+        width: 200px;
+        height: 50px;
+    }
+    
+    #cadre{
+        width: 99%;
+        margin: 0px;
+        border-radius: 0px;
+    }
+    
+    #arbre button{
+        width: 200px;
+        height: 50px;
+        margin: auto;
+    }
+    
+    #btn_pdf{
+        text-align: center;
+    }
+    
+    /* Affichage des descriptions de talent au survol */
+    #skill1:hover #infoSkill1{
+      display: none;
+    }
+
+    #skill2:hover #infoSkill2{
+        display: none;  
+    }
+
+    #skill3:hover #infoSkill3{
+        display: none;
+    }
+
+    #skill4:hover #infoSkill4{
+        display: none;
+    }
+
+    #skill5:hover #infoSkill5{
+        display: none;
+    }
+
+    #skill6:hover #infoSkill6{
+        display: none;
+    }
+
+    #skill7:hover #infoSkill7{
+        display: none;
+    }
+
+    #skill8:hover #infoSkill8{
+        display: none;
+    }
+
+    #skill9:hover #infoSkill9{
+        display: none;
+    }
+
+    #skill10:hover #infoSkill10{
+        display: none;
+    }
+
+    #skill11:hover #infoSkill11{
+        display: none;
+    }
+
+    #skill12:hover #infoSkill12{
+        display: none;
+    }
+
+    #skill13:hover #infoSkill13{
+        display: none;
+    }
+
+    #skill14:hover #infoSkill14{
+        display: none;
+    }
+
+    #skill15:hover #infoSkill15{
+        display: none;
+    }
+
+    #skill16:hover #infoSkill16{
+        display: none;
+    }
+
+    #skill17:hover #infoSkill17{
+        display: none;
+    }
+
+    #skill18:hover #infoSkill18{
+        display: none;
+    }
+    /* Formulaire */
+    form{
+		width: 99%;
+		margin: 0px;
+        margin-top: 30px;
+        border-radius: 0px;
+    }
+    
+    #facebook img{
+        width: 55px;
+        margin: 10px;
+    }
+    
+    #twitter img{
+        width: 60px;
+        margin: 10px;
+    }
+    
+    /* Footer */
+    footer{
+        margin-bottom: 0px;
+        border-radius: 0px;
+    }
+}
+
